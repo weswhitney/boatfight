@@ -1,0 +1,9 @@
+<h1>users</h1>
+
+<%= link_to 'Create Player', new_user_path %>
+
+<% @users.each do |user| %>
+
+<%= "#{user.first_name} #{user.last_name}" %>
+
+<% end %>
