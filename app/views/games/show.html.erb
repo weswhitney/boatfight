@@ -1,0 +1,31 @@
+games
+
+<table>
+  <thead>
+    <th>
+      Player 1
+    </th>
+    <th>
+      Player 2
+    </th>
+    <th>
+      Winner
+    </th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= @game.user_id %>
+      </td>
+      <td>
+        <%= @game.opponent_id %>
+      </td>
+      <td>
+        <%= @game.winner %>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
+
+<%= link_to "Edit Game", edit_game_path %>

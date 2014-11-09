@@ -1,9 +1,14 @@
+<% if notice %>
+<%= notice %>
+<% end %>
+
 <h1>users</h1>
 
-<%= link_to 'Create Player', new_user_path %>
 
 <% @users.each do |user| %>
 
 <%= link_to "#{user.first_name} #{user.last_name}", edit_user_path(user) %>
 
 <% end %>
+
+<%= link_to 'Create Player', new_user_path %>

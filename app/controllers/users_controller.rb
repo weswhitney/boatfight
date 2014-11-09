@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params.require(:user).permit(:first_name, :last_name, :email))
     @user.save
-    redirect_to users_path
+    redirect_to @user, notice: "User has been successfully updated"
   end
 
   def show
@@ -24,14 +24,13 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    user_params= params.require(:user).permit(:first_name, :last_name, :email)
-    @user.update(user_params)
-    redirect_to users_path
+    @user.update(params.require(:user).permit(:first_name, :last_name, :email))
+    redirect_to @user, notice: "User has been updated"
   end
 
   def destroy
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to users_path
+    redirect_to users_path, notice: "User has been destroyed"
   end
 end
