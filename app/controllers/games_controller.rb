@@ -25,7 +25,7 @@ class GamesController < ApplicationController
   def update
     @game = Game.find(params[:id])
     @game.update(params.require(:game).permit(:user_id, :opponent_id, :winner ))
-    redirect_to @game, notice: "Game was successfully updated"
+    redirect_to games_path, notice: "Game was successfully updated"
   end
 
   def destroy

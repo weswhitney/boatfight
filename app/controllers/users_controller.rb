@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params.require(:user).permit(:first_name, :last_name, :email))
     @user.save
-    redirect_to @user, notice: "User has been successfully updated"
+    redirect_to @users, notice: "User has been successfully updated"
   end
 
   def show

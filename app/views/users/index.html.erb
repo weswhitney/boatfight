@@ -4,11 +4,28 @@
 
 <h1>users</h1>
 
+<table class='Table'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
 
-<% @users.each do |user| %>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td>
+            <%= link_to "#{user.first_name} #{user.last_name}", edit_user_path(user) %>
+          </td>
+          <td><%= mail_to user.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+</table>
 
-<%= link_to "#{user.first_name} #{user.last_name}", edit_user_path(user) %>
+<br>
+<br>
 
-<% end %>
-
-<%= link_to 'Create Player', new_user_path %>
+<%= link_to 'Create Player', new_user_path %> |
+<%= link_to 'Play Game!', games_path %>

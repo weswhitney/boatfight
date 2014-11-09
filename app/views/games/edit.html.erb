@@ -1,3 +1,16 @@
-edit
+<h1>Edit</h1>
+<%= form_for @game do |f| %>
 
-<%= link_to "Delete Game", games_path %>
+<%= f.label :user_id %>
+<%= f.text_field :user_id %>
+
+<%= f.label :opponent_id %>
+<%= f.text_field :opponent_id %>
+
+<%= f.label :winner %>
+<%= f.check_box :winner %>
+
+<%= f.submit %>
+
+
+<% end %>
