@@ -1,0 +1,23 @@
+<%= form_for @board do |f| %>
+
+
+<%= f.label :type_of_ship %>
+<%= f.text_field :type_of_ship %>
+
+<%= f.label :start_x %>
+<%= f.text_field :start_x %>
+
+<%= f.label :end_x %>
+<%= f.text_field :end_x %>
+
+<%= f.label :start_y %>
+<%= f.text_field :start_y %>
+
+<%= f.label :end_y %>
+<%= f.text_field :end_y %>
+
+<%= f.label :hits %>
+<%= f.number_field :hits %>
+
+<%= f.submit class: "btn btn-primary" %>
+<% end %>

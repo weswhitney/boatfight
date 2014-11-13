@@ -6,7 +6,7 @@ gem 'rails', '4.1.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS
-gem 'bootstrap-sass', '~> 3.2.0' 
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -30,7 +30,16 @@ gem 'spring',        group: :development
 # Use ActiveModel gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'# gem 'bcrypt', '~> 3.1.7'
 
-gem 'rails_12factor', group: :production# Use unicorn as the app server
+gem 'rails_12factor', group: :production
+
+gem 'bcrypt'
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'launchy'
+end
+# Use unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
