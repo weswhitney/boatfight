@@ -21,6 +21,10 @@ class BoardsController < ApplicationController
     redirect_to @board, notice: "Board was successfully created"
   end
 
+  def edit
+    @board = Board.find(params[:id])
+  end
+
   def show
     @board = Board.find(params[:id])
   end
