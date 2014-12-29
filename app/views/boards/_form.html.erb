@@ -1,23 +1,48 @@
 <%= form_for @board do |f| %>
 
 
-<%= f.label :type_of_ship %>
-<%= f.text_field :type_of_ship %>
+<div class="well form-inline">
 
-<%= f.label :start_x %>
-<%= f.text_field :start_x %>
+  <div class="form-group">
+    <%= f.label :type_of_ship %>
+    <%= f.select :type_of_ship,
+    ["BATTLESHIP", "CARRIER", "DESTROYER", "SUBMARINE", "PATROL" ],
+    {include_blank: false},
+    {class: "form-control"} %>
+  </div>
 
-<%= f.label :end_x %>
-<%= f.text_field :end_x %>
+  <div class="form-group">
+    <%= f.label :start_y %>
+    <%= f.select :start_y,
+    ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J" ],
+    {include_blank: false},
+    {class: "form-control"} %>
+  </div>
 
-<%= f.label :start_y %>
-<%= f.text_field :start_y %>
+  <div class="form-group">
+    <%= f.label :end_y %>
+    <%= f.select :end_y,
+    ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J" ],
+    {include_blank: false},
+    {class: "form-control"} %>
+  </div>
 
-<%= f.label :end_y %>
-<%= f.text_field :end_y %>
+  <div class="form-group">
+    <%= f.label :start_x %>
+    <%= f.select :start_x,
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
+    {include_blank: false},
+    {class: "form-control"} %>
+  </div>
 
-<%= f.label :hits %>
-<%= f.number_field :hits %>
+  <div class="form-group">
+    <%= f.label :end_x %>
+    <%= f.select :end_x,
+    ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10" ],
+    {include_blank: false},
+    {class: "form-control"} %>
+  </div>
 
-<%= f.submit class: "btn btn-primary" %>
-<% end %>
+  <%= f.submit class: "btn btn-primary" %>
+  <% end %>
+</div>
