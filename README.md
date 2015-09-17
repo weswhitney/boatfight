@@ -19,4 +19,4 @@ decide who goes first.
 
 Alternate turns guessing where people's boats are on the grid.
 
-aplph button selector/Number selector button for the
+button selector/Number selector button for the
